@@ -1,0 +1,95 @@
+<section class="section-features" >
+
+  <mat-tab-group >
+
+    <mat-tab label="Informatiques">
+         <app-info-display-component></app-info-display-component>
+     </mat-tab>
+
+     <mat-tab label="Experiences">
+      <app-experience-display></app-experience-display>
+     </mat-tab>
+
+     <mat-tab label="Formations">
+      <app-formation-display-component></app-formation-display-component>
+     </mat-tab>
+
+    <mat-tab label="Electroniques">
+      <app-elec-display-component></app-elec-display-component>
+     </mat-tab>
+
+
+    <mat-tab label="Mes Atouts">
+     <app-atout-display-component></app-atout-display-component>
+    </mat-tab>
+
+    <mat-tab label="Langues">
+     <app-langue-display-component></app-langue-display-component>
+     </mat-tab>
+     <mat-tab label="Loisirs">
+      <app-loisir-display-component></app-loisir-display-component>
+      </mat-tab>
+
+  </mat-tab-group>
+
+
+
+          <!-- <div class="competance-box">
+            <button class="feature-box"  style="cursor: pointer;">
+
+                   <h3>informatiques</h3>
+
+              <div class="feature-box-details">
+
+                <ul>
+                  <li  routerLink="/competance/backend"  style="cursor: pointer;" routerLinkActive="feature-box-activated">backend</li>
+                  <li  routerLink="/competance/frontend" style="cursor: pointer;">frontend</li>
+                  <li  routerLink="/competance/orm" style="cursor: pointer;"> orm/bd/server </li>
+                  <li  routerLink="/competance/logiciel" style="cursor: pointer;">logiciels</li>
+                </ul>
+              </div>
+            </button>
+
+            <div class="feature-box " style="cursor: pointer;" routerLink="/competance/electronique" routerLinkActive="feature-box-activated">
+              <h3 >electroniques</h3>
+              <ul></ul>
+            </div>
+
+           <div class="feature-box " (click)="onShow('electronique')" (mouseleave)="onHide('electronique')">
+              <h3 >electroniques</h3>
+              <ul></ul>
+            </div> -->
+
+            <!-- <div class="feature-box " style="cursor: pointer;" routerLink="/competance/exp" routerLinkActive="feature-box-activated">
+                <h3 >experiences</h3>
+            </div>
+
+            <div class="feature-box " style="cursor: pointer;" routerLink="/competance/form" routerLinkActive="feature-box-activated">
+              <h3  >formations</h3>
+            </div>
+
+            <div class="feature-box "  style="cursor: pointer;" routerLink="/competance/langue" routerLinkActive="feature-box-activated">
+              <h3 >langues</h3>
+            </div>
+
+            <div class="feature-box "  style="cursor: pointer;" routerLink="/competance/atout" routerLinkActive="feature-box-activated">
+              <h3 >Mes Atous</h3>
+            </div>
+
+            <div class="feature-box "  style="cursor: pointer;" routerLink="/competance/loisir" routerLinkActive="feature-box-activated">
+              <h3 >Loisirs</h3>
+            </div>
+
+        </div> -->
+
+    <!-- <div class="description-box">
+      <router-outlet></router-outlet >
+
+
+          <app-progress-bar  id="div1" style="display: none;"></app-progress-bar>
+          <app-progress-bar-backend  id="div2" style="display: none;"></app-progress-bar-backend>
+          <app-progress-bar-frontend  id="div3" style="display: none;" ></app-progress-bar-frontend>
+          <app-progress-bar-bureautique id="div4" style="display: none;"></app-progress-bar-bureautique>
+
+        </div> -->
+</section>

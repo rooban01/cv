@@ -1,0 +1,63 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="contact">
+
+  <mat-card>
+    <!--<mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form (submit) ="onSaveContacts(contactForm)" #contactForm="ngForm" *ngIf="!isLoading"> -->
+
+  <form [formGroup]="formCompetance" (submit) ="onSaveCompetance()">
+
+   <div class="mat-box">
+
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            formControlName="sujet"
+            placeholder="sujet"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            formControlName="niveau"
+            placeholder="niveau"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            formControlName="commentaire"
+            placeholder="commentaie"
+          >
+        </mat-form-field>
+
+
+  <div style="margin-top: 3rem; margin-bottom: 3rem;">
+    <div class ="my-row" >
+
+      <button mat-raised-button
+            type="submit"
+            color="accent"
+            style="margin-right: 5rem;"
+            >Ajouter
+      </button>
+      <button  mat-raised-button (click)="onPrecedent()" color="accent"    style="margin-right: .5rem;">
+        Précédent
+      </button>
+      <button  mat-raised-button (click)="onNext()" color="accent">
+        Suivant
+      </button>
+
+  </div>
+    </div>
+  </div>
+
+  </form>
+
+  </mat-card>
+
+
+</div>

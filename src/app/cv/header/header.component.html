@@ -1,0 +1,60 @@
+
+<section class="section-header">
+
+<header class="my-header" *ngFor ="let header of headers" >
+
+
+
+
+
+  <div class="my-row" >
+    <div class="col-1-of-4" >
+       <div class="my-header-logo-box">
+          <img src={{header.imagePath}} alt="logo" class="my-header-logo">
+
+       </div>
+      <!-- <figcaption class="my-header-caption">{{header.nom}} {{ header.prenom}}</figcaption> -->
+    </div>
+    <div class="col-3-of-4" >
+    <div class="my-header-box-name">
+        <h1 class="heading-name u-margin-buttom-small">
+          <span class="heading-name-main">{{header.titre}}</span>
+          <span class="heading-name-p  u-margin-buttom-small">{{header.phrase}}</span>
+        </h1>
+     <div>
+       <a href={{cvPath}} class="my-btn my-btn-white my-btn-animated" download="cvKulathilakapillai" >Telecharger</a>
+     </div>
+  </div>
+</div>
+</div>
+
+
+<div class="my-row">
+  <div class="col-1-of-4" style="position:relative">
+  <div class="my-header-box-details">
+    <h1 class="heading-details">
+
+      <span class="heading-details-sub">{{header.gender +". "+header.nom+ " "+header.prenom}}<br></span>
+      <span class="heading-details-p">{{ header.numero+" " +header.rue}}<br></span>
+      <span class="heading-details-p">{{header.code +" " +header.commune}}<br></span>
+      <span class="heading-details-p">{{"tel: "+ header.telephone}}<br></span>
+      <span class="heading-details-p">{{"mail: "+header.email}}<br></span>
+    </h1>
+  </div>
+</div>
+</div>
+
+
+
+
+
+  <!-- <div class="my-header-text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary-main"> Mon cv </span>
+      <span class="heading-primary-sub"> info </span>
+    </h1>
+    <a href="#" class="my-btn my-btn-white my-btn-animated">Telecharger</a>
+  </div> -->
+
+</header>
+</section>

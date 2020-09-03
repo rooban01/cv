@@ -1,0 +1,23 @@
+<section class="section-nav">
+  <mat-toolbar>
+    <div fxHide.gt-sm>
+      <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+     </button>
+   </div>
+    <div fxHide.sm fxHide.xs >
+      <a style="cursor: pointer;" routerLink="/home" routerLinkActive="nav-activated">home</a>
+    </div>
+
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs fxHide.sm>
+      <ul fxLayout fxLayoutGap="20px" >
+        <li><a routerLink="/competance" style="cursor: pointer;"  routerLinkActive="nav-activated">Competances</a></li>
+        <li><a routerLink="/portfolio" style="cursor: pointer;"  routerLinkActive="nav-activated">Portfolio</a></li>
+        <li><a routerLink="/contacts" style="cursor: pointer;"  routerLinkActive="nav-activated">Contact</a></li>
+        <li><a  routerLink="/login" style="cursor: pointer;"  *ngIf ="!userIsAuthenticated" routerLinkActive="nav-activated">login</a></li>
+        <li><a style="cursor: pointer;" (click)= "onLogout()"*ngIf ="userIsAuthenticated"  routerLinkActive="nav-activated">logout</a></li>
+      </ul>
+    </div>
+  </mat-toolbar>
+</section>
+

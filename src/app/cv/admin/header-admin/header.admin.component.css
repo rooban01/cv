@@ -1,0 +1,42 @@
+
+
+.contact{
+  margin: 5rem auto;
+  width: 50%;
+  height: 100%;
+
+}
+
+.mat-box{
+ width: 80%;
+ margin: auto auto;
+}
+
+mat-form-field{
+  width: 100%;
+
+}
+
+.input-text{
+
+  font-size: 1.6rem;
+}
+input[type="file"]{
+  visibility: hidden;
+}
+
+.radio-pos{
+ margin-top: 1rem;
+ margin-right: 2rem;
+ font-size: 1.3rem;
+}
+
+.image-preview{
+  height: 5rem;
+  margin: 1rem 0;
+
+}
+
+.image-preview img{
+  height: 100%;
+}

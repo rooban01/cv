@@ -1,0 +1,21 @@
+
+
+<!--
+<div class="grid">
+  <div  *ngFor = "let competance of competances" >
+      <mat-label  color="red" style="padding-top: 0 ; " >{{ competance.sujet }}</mat-label>
+      <mat-progress-bar  style="padding-top:0 ; " value = competance.niveau.value></mat-progress-bar>
+  </div>
+</div> -->
+
+<div class = "description-box">
+<div *ngFor = "let competance of competances">
+
+    <tr>
+      <div *ngIf = " competance.commentaire   === 'frontend' " >
+      <td class="competance-label"><mat-label class="mat-label">{{ competance.sujet }}</mat-label></td>
+      <td class="competance-bar"> <mat-progress-bar class="mat-progress-bar" style="padding-top:0 ;" value ={{competance.niveau}}></mat-progress-bar></td>
+       </div>
+    </tr>
+</div>
+</div>

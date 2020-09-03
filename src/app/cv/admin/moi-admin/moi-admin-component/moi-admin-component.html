@@ -1,0 +1,115 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="contact">
+  <mat-card>
+    <form [formGroup]="formMoi" (submit) ="onSaveMoi()">
+      <div class="mat-box">
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="titre1"
+                  placeholder="Titre de Presentation"
+                >
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <textarea
+                  matInput
+                  rows="4"
+                  formControlName="presentation1"
+                  placeholder="Presentation"
+                  ></textarea>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="titre2"
+                  placeholder="Presentation de site"
+                >
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <textarea
+                  matInput
+                  rows="4"
+                  formControlName="presentation2"
+                  placeholder="Presentation de site"
+                  ></textarea>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="titre3"
+                  placeholder=" titre Presentation infomatique"
+                >
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <textarea
+                  matInput
+                  rows="4"
+                  formControlName="presentation3"
+                  placeholder="Presentation informatique"
+                  ></textarea>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="titre4"
+                  placeholder="Titre Presentation electronique"
+                >
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <textarea
+                  matInput
+                  rows="4"
+                  formControlName="presentation4"
+                  placeholder="Presentation de electronique"
+                  ></textarea>
+              </mat-form-field>
+            </div>
+
+
+          <div style="margin-top: 3rem; margin-bottom: 3rem;">
+            <div class ="my-row" >
+
+              <button mat-raised-button
+                    type="submit"
+                    color="accent"
+                    style="margin-right: 5rem;"
+                    >Ajouter
+              </button>
+              <button  mat-raised-button (click)="onPrecedent()" color="accent"    style="margin-right: .5rem;">
+                Précédent
+              </button>
+              <button  mat-raised-button (click)="onNext()" color="accent">
+                Suivant
+              </button>
+
+          </div>
+          </div>
+
+      </div>
+    </form>
+  </mat-card>
+</div>
+

@@ -1,0 +1,57 @@
+
+
+
+*,
+*::after,
+*::before
+{
+    margin:0 ;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:inherit
+}
+
+:root{
+  --color-primary: #f8fcfc;
+  --color-primary-light: #ecf2f3;
+}
+
+html{
+    font-size: 62.5%;       //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(phone){
+      font-size: 45%;                           // 1 rem =12px , 12/16 = 75%
+   }
+
+
+    @include respond(tab-land){        //<1200
+      font-size: 56%;
+                             // 1 rem =9px , 9/16 = 56.25%
+    }
+    @include respond(tab-port){        //<900
+      font-size: 50%;                            // 1 rem =8px , 8/16 = 50%
+    }
+
+    @include respond(big-desktop){
+       font-size: 75%;                           // 1 rem =12px , 12/16 = 75%
+    }
+}
+
+body {
+  box-sizing:border-box ;
+
+  margin: 0rem 2rem 0 2rem;
+
+  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light));
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include respond(phone){
+    padding: 0;
+
+  margin: 0rem 2rem 0 2rem;
+  }
+}
+
+

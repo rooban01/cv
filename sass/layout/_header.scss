@@ -1,0 +1,406 @@
+
+
+.my-header{
+   min-height:90vh;
+
+
+
+    position: relative;
+
+  //  background-image:url(backend/images/myHeader.jpg);
+  background-image:linear-gradient(105deg,
+                      rgba($color-white, .1) 20%,
+                      rgba($color-white, .8) 55%,
+                      transparent 50%),
+                      url(imagesStat/myHeader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    //  background-image: linear-gradient(
+    //                     to right bottom,
+    //                      rgba($color-primary-light,0.8),
+    //                      rgba($color-primary-dark,0.8)),
+    //                      url(backend/images/myHeader.jpg) ;
+    /* background-size: cover;
+    background-position: top; */
+
+
+
+
+
+    @include respond(tab-port){
+      //  -webkit-clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
+     //  clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
+     background-image:linear-gradient(160deg,
+     rgba($color-white, .2) 60%,
+     rgba($color-white, .8) 20%,
+     transparent 50%),
+     url(imagesStat/myHeader.jpg);
+       height: 70rem;
+     }
+
+
+    &-logo-box {
+        position: absolute;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        top:8rem;
+        left: 7%;
+        width: 25rem;
+        height:  25rem;
+        backface-visibility: hidden;
+
+        @include respond(tab-port){
+            position: absolute;
+            left: 50%;
+            top: 15rem;
+            width: 20rem;
+            height:20rem;
+            text-align: center;
+            transform: translate(-50% , -50%);
+            margin-bottom: 1rem;
+         }
+         @include respond(phone){
+            position: absolute;
+            left: 50%;
+            top: 15rem;
+            width: 15rem;
+            height:15rem;
+            transform: translate(-50% , -50%);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+
+
+
+   }
+   & img{
+     height:  100%;
+     width: 100%;
+   }
+
+   &-caption{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     font-size: 1.3rem;
+     color: white;
+     transform: translate(-50%, -50%);
+   }
+
+
+    &-logo{
+        height: 500px ;
+        filter:blur(4px) brightness(60%);
+        transition: all 2s;
+        backface-visibility: hidden;
+        &:hover{
+
+            transform:  translateZ(10rem)scale(1.2);
+            filter:blur(0px) brightness(100%);
+
+        }
+    }
+
+    // &-text-box {
+    // position: absolute;
+    // top:50%;
+    // left: 55%;
+    // transform: translate(-50% , -50%);
+    // text-align: center;
+
+    // }
+
+    &-box-name{
+      display: block;
+        display: inline-block;
+        position: absolute;
+        top: 18rem;
+        left: 60%;
+         width:60% ;
+        height:20rem;
+        text-align: center;
+
+        transform: translate(-50% , -50%);
+
+
+        @include respond(tab-land){
+            position: absolute;
+            top: 23rem;
+            width: 60%;
+            height:30rem;
+            text-align: center;
+            left: 67%;
+            transform: translate(-50% , -50%);
+         }
+
+        @include respond(tab-port){
+          margin-top: 1rem;
+
+
+            position: absolute;
+            top: 40rem;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            width: 80%;
+            height:auto;
+            text-align: center;
+
+            margin-bottom: 1rem;
+         }
+
+
+        @include respond(phone){
+          margin-top: 2rem;
+            position: absolute;
+           top: 38rem;
+           left:50%;
+            transform: translate(-50% , -50%);
+            width: 90%;
+
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+
+    }
+
+
+    &-box-details  {
+
+        position: relative;;
+
+        top: 40rem;
+        left:2rem;
+        width:50rem;
+        height:  auto;
+        display: block;
+        display: inline-block;
+
+
+
+
+        @include respond(tab-port){
+          margin-top: 1rem;
+            position: absolute;
+            top: 50rem;
+            left:50%;
+            transform: translate(-50% , -50%);
+            width: 40rem;
+            height:auto;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(phone){
+          margin-top: 1rem;
+            position: absolute;
+           top: 50rem;
+           left:50%;
+            transform: translate(-50% , -50%);
+            width: 35rem;
+            height:auto;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+
+    }
+}
+
+
+.header-bar{
+  display: inline-block;
+    position: relative;
+    width: inherit;
+    background-color:rgb(50, 50, 50);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    height: 8rem;
+    @include respond(tab-port){
+      display: flex;
+      justify-content: center;
+      height: 6rem;
+     }
+     @include respond(phone){
+
+      height: 5rem;
+    }
+
+
+}
+
+
+
+.nav-item{
+    position: relative;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+  margin: auto 1rem;
+    width: 14rem;
+    height: 5rem;
+    background:  rgb(60, 60, 60);;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    @include respond(phone){
+      height: 3rem;
+      margin: auto .2rem auto .2rem;
+    }
+    @include respond(tab-port){
+      height: 4rem;
+      margin: auto .5rem auto .5rem;
+    }
+
+    & li  {
+      display: flex;
+       text-decoration: none;
+       list-style: none;
+       color: white;
+       font-size: 1.3rem;
+       font-weight: 300;
+       text-transform: uppercase;
+       z-index: 10;
+       @include respond(phone){
+        font-size: .8rem;
+        font-weight: 150;
+      }
+      @include respond(tab-port){
+        font-size: 1rem;
+        font-weight: 200;
+
+      }
+         & button{
+          display: flex;
+          border: none;
+          background: none;
+          font-size: 1.3rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          z-index: 10;
+      }
+
+      & a{
+        text-decoration: none;
+        color: rgb(184, 218, 231);
+        font-size: 200;
+
+      }
+    }
+
+   &-moi{
+      margin-right: 10%;
+      margin-left: 2%;
+      @include respond(tab-port){
+        margin-right: 1rem;
+          width: 8rem;
+      }
+      @include respond(tab-port){
+        margin-right: auto;
+          width: 8rem;
+      }
+    }
+    @include respond(tab-port){
+      width: 10rem;
+    }
+    @include respond(tab-land){
+       width: 13rem;
+     }
+  &-activated{
+    transform:  scale(1.05);
+        background:  rgb(80, 80, 80);
+        transition: .3s;
+        z-index: 10;
+     }
+    &:hover{
+        transform: translateY(-2px) scale(1.05);
+        background:  rgb(80, 80, 80);
+        transition: .3s;
+        z-index: 10;
+    }
+
+  }
+
+
+
+
+.nav-item-admin{
+  position: relative;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  margin: 1rem auto;
+
+  width: 13rem;
+  height: 4rem;
+  background:  rgb(80, 93, 110);;
+  text-decoration: none;
+  border: none;
+  outline: none;
+
+
+  & li  {
+    display: flex;
+     text-decoration: none;
+     list-style: none;
+     color: white;
+     font-size: 1.3rem;
+     font-weight: 400;
+     text-transform: uppercase;
+     z-index: 10;
+       & button{
+        display: flex;
+        border: none;
+        background: none;
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        z-index: 10;
+    }
+
+    & a{
+      text-decoration: none;
+      color: rgb(200, 200, 200);
+      font-size: 200;
+
+    }
+  }
+
+ &-moi{
+    margin-right: 10%;
+    margin-left: 2%;
+    @include respond(tab-port){
+      margin-right: 1rem;
+        width: 8rem;
+    }
+  }
+  @include respond(tab-port){
+    width: 10rem;
+  }
+  @include respond(tab-land){
+     width: 13rem;
+   }
+&-activated{
+  transform:  scale(1.05);
+      background:  rgb(180, 180, 180);
+      transition: .3s;
+      z-index: 10;
+   }
+  &:hover{
+      transform: translateY(-2px) scale(1.05);
+      background:  rgb(180, 180, 180);
+      transition: .3s;
+      z-index: 10;
+  }
+
+}
+
+
+

@@ -1,0 +1,53 @@
+li:hover,
+li:active{
+ color: lightgray;
+
+}
+
+li{
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+  text-transform: uppercase;
+}
+a{
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+  text-transform: uppercase;
+
+}
+
+.nav-caption{
+  display: inline-block;
+  padding-left: 6px ;
+}
+
+
+.nav-item1 {
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  margin: auto auto;
+  width: 15rem;
+  height: 4rem;
+  background: #052888;
+  text-decoration: none;
+  border: none;
+  outline: none; }
+  .nav-item1:hover{
+    background: #0639c5;
+  }
+
+  .nav-item1:not(:last-child) {
+    border-bottom: 1px solid #eee; }
+
+    .nav-activated{
+      background: #0443f1;
+    }
+
+

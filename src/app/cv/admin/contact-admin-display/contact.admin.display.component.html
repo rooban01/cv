@@ -1,0 +1,63 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="contact-display" >
+  <div class="display-box" >
+    <div *ngIf="contacts?.length==0" class="message" role="alert">
+      Vous n'avez pas des messages!
+</div>
+<mat-accordian *ngFor = "let contact of contacts"  >
+  <div  >
+  <mat-expansion-panel   >
+
+    <mat-expansion-panel-header>
+     {{ contact.gender}}. {{ contact.nom }}  {{ contact.prenom1 }} de la societe {{ contact.societe }} vous a envoyé un message
+    </mat-expansion-panel-header>
+
+    <mat-panel-description class="display-letter" *ngFor="let header of headers">
+
+
+              {{ contact.gender }}{{" "}} {{ contact.nom }} {{" "}} {{ contact.prenom1 }}<br>
+              Poste: {{contact.poste}}<br><br>
+              Societe: {{contact.societe}}<br>
+              Adresse: {{contact.addresse}} <br>
+              Telephone: {{ contact.telephone}}<br>
+              Mail: {{ contact.email}}
+              <br>
+              <br>
+
+
+
+            {{ header.gender }} {{" "}} {{ header.nom }} {{" "}} {{ header.prenom}},<br>
+
+
+
+            Suite à l’étude de votre candidature, nous avons le plaisir <br>
+            de vous inviter à passer un entretien physique dans nos locaux,<br>
+            situé à l'adresse indiquée ci-dessus le {{contact.rdv}}.<br><br>
+
+            A cette occasion, vous rencontrerez {{contact.gender}} {{contact.nom}} {{contact.prenom1}} <br>
+            responsable de {{contact.poste}}.<br><br>
+
+            Je vous invite à vous présenter 15 minutes avant l’heure de <br>
+            votre entretien ainsi que d’apporter votre pièce d’identité <br>
+            afin d’accéder à nos locaux<br><br>
+
+            Cordialement,<br>
+            Chargée de recrutement<br><br>
+
+            Ps: {{contact.commentaire}}
+
+
+
+          </mat-panel-description>
+
+          <mat-action-row >
+            <a mat-button color="primary" [routerLink]= "['/edit', contact.id]" >EDIT</a>
+            <button mat-button color="warn" (click)="onDelete(contact.id)">DELETE</button>
+          </mat-action-row>
+
+    </mat-expansion-panel>
+  </div>
+</mat-accordian>
+
+</div>
+</div>

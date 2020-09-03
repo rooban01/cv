@@ -1,0 +1,199 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="contact">
+  <mat-card>
+    <form [formGroup]="form" (submit) ="onSaveHeader()">
+      <div class="mat-box">
+
+              <mat-radio-group  formControlName="gender">
+                <mat-radio-button
+                    class="radio-pos"
+                    type="radio"
+                    value="monsieur"
+                  >
+                <label for="Monsieur">Monsieur</label>
+              </mat-radio-button>
+              <mat-radio-button
+                  class="radio-pos"
+                  type="radio"
+                  value="madame"
+                >
+                <label for="femme">Madame</label>
+              </mat-radio-button>
+              <mat-radio-button
+                  class="radio-pos"
+                  type="radio"
+                  value="mademoiselle"
+              >
+            <label for="femme">Mademoiselle</label>
+          </mat-radio-button>
+            </mat-radio-group>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="nom"
+                  placeholder="Nom"
+                >
+                <mat-error *ngIf="form.get('nom').invalid">Nom invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="prenom"
+                  placeholder="Prenom"
+                >
+                <mat-error *ngIf="form.get('prenom').invalid">Prenom invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="numero"
+                  placeholder="N° Rue"
+                >
+                <mat-error *ngIf="form.get('numero').invalid">Numero de la rue invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="rue"
+                  placeholder="Rue"
+                >
+              <mat-error *ngIf="form.get('rue').invalid">Rue invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="complementaire"
+                  placeholder="complementaire"
+                >
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="code"
+                  placeholder="Code Postal"
+                >
+                <mat-error *ngIf="form.get('code').invalid">Code Postal invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="commune"
+                  placeholder="Commune"
+                >
+                <mat-error *ngIf="form.get('commune').invalid">Commune invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="telephone"
+                  placeholder="Téléphone"
+                >
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="email"
+                  formControlName="email"
+                  placeholder="Email"
+                >
+                <mat-error *ngIf="form.get('email').invalid">Email invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+          <div>
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                formControlName="titre"
+                placeholder="titre"
+              >
+              <mat-error *ngIf="form.get('titre').invalid">Titre invalide</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field>
+              <textarea
+                matInput
+                rows="4"
+                formControlName="phrase"
+                placeholder="Phrase D'accroche"
+                ></textarea>
+            </mat-form-field>
+          </div>
+
+
+
+
+          <div>
+            <button mat-stroked-button type="button" (click)="filePicker.click()">Photo</button>
+            <input type="file" #filePicker (change)="onImagePicked($event)">
+          </div>
+          <div class="image-preview" *ngIf="imagePreview !=='' && imagePreview">
+            <img [src]="imagePreview" [alt]="form.value.nom">
+          </div>
+
+          <div>
+            <button mat-stroked-button type="button" (click)="cvPicker.click()">Ajouter Cv</button>
+            <input type="file" #cvPicker (change)="onCvPicked($event)">
+          </div>
+          <div class="image-preview" *ngIf="imagePreview !=='' && imagePreview">
+            <img [src]="imagePreview1" [alt]="form.value.nom">
+          </div>
+
+          <div style="margin-top: 3rem; margin-bottom: 3rem;">
+            <div class ="my-row" >
+
+              <button mat-raised-button
+                    type="submit"
+                    color="accent"
+                    style="margin-right: 5rem;"
+                    >Ajouter
+              </button>
+
+              <button  mat-raised-button (click)="onNext()" color="accent">
+                Suivant
+              </button>
+
+          </div>
+          </div>
+
+      </div>
+    </form>
+  </mat-card>
+</div>

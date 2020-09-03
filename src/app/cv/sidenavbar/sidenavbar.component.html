@@ -1,0 +1,10 @@
+
+<mat-nav-list>
+  <li class="nav-item1" routerLinkActive="nav-activated" style="cursor: pointer;" routerLink="/home" >Home</li>
+  <li class="nav-item1" routerLinkActive="nav-activated" style="cursor: pointer;" routerLink="/competance" >Competances</li>
+  <li class="nav-item1" routerLinkActive="nav-activated" style="cursor: pointer;" routerLink="/portfolio" >Portfolio</li>
+  <li class="nav-item1" routerLinkActive="nav-activated"  style="cursor: pointer;" routerLink="/contacts">Contact</li>
+  <li class="nav-item1"  *ngIf ="!userIsAuthenticated" routerLinkActive="nav-activated" routerLink="/login" style="cursor: pointer;">login</li>
+  <li class="nav-item1" *ngIf ="userIsAuthenticated" routerLinkActive="nav-activated" style="cursor: pointer;" (click)= "onLogout()" >logout</li>
+</mat-nav-list>
+

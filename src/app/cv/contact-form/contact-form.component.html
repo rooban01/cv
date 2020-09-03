@@ -1,0 +1,146 @@
+<div class = "contact">
+
+  <mat-card>
+            <!--<mat-spinner *ngIf="isLoading"></mat-spinner>
+            <form (submit) ="onSaveContacts(contactForm)" #contactForm="ngForm" *ngIf="!isLoading"> -->
+
+      <form [formGroup]="form" (submit) ="onSaveContacts()">
+
+  <div class = "mat-box">
+    <div>
+            <mat-radio-group  formControlName="gender">
+              <mat-radio-button style="margin-right: 10px;"
+                    class="radio-pos"
+                    type="radio"
+                    value="Monsieur"
+                  >
+                <label for="Monsieur">Monsieur</label>
+              </mat-radio-button>
+              <mat-radio-button
+                  class="radio-pos"
+                  type="radio"
+                  value="Madame"
+                >
+                <label for="femme">Madame</label>
+              </mat-radio-button>
+          </mat-radio-group>
+
+      <div class="input-text">
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                formControlName="nom"
+                placeholder="Nom"
+              >
+              <mat-error *ngIf="form.get('nom').invalid">Veuillez saisir votre nom</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                formControlName="prenom1"
+                placeholder="Prenom"
+              >
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                formControlName="poste"
+                placeholder="Poste"
+              >
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                formControlName="societe"
+                placeholder="Societe"
+              >
+              <mat-error *ngIf="form.get('societe').invalid">Veuillez saisir nom de la societe minimum 3 caracteres </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <textarea
+              placeholder="Adresse"
+                matInput
+                rows="4"
+                formControlName="addresse"
+
+              ></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                formControlName="telephone"
+                placeholder="Telephone"
+              >
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                formControlName="email"
+                placeholder="Email"
+              >
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                type="text"
+                formControlName="rdv"
+                placeholder="rdv"
+              >
+            </mat-form-field>
+
+            <mat-form-field>
+              <textarea
+              placeholder="Infomations"
+                matInput
+                rows="4"
+                formControlName="commentaire"
+
+              ></textarea>
+            </mat-form-field>
+          </div>
+      </div>
+
+        <!-- <div>
+          <button mat-stroked-button type="button" (click)="filePicker.click()">Pick image</button>
+          <input type="file" #filePicker (change)="onImagePicked($event)">
+        </div>
+        <div class="image-preview" *ngIf="imagePreview !=='' && imagePreview">
+          <img [src]="imagePreview" [alt]="form.value.nom">
+        </div> -->
+
+        <div style="margin-top: 3rem; margin-bottom: 3rem;">
+              <button mat-raised-button style="margin-right: 10px;"
+                type="submit"
+                color="accent"
+                >Envoyer
+              </button>
+              <button mat-raised-button
+               routerLink="/contacts"
+                color="accent"
+                >Annuler
+            </button>
+
+        </div>
+
+  </div>
+
+  </form>
+
+  </mat-card>
+
+  </div>
+
+

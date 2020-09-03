@@ -1,0 +1,63 @@
+
+<div class="section-contact">
+<div class="contact">
+
+<mat-card>
+  <div class= "mat-box">
+<mat-spinner  *ngIf ="isLoading"></mat-spinner>
+
+
+    <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()" *ngIf ="!isLoading">
+    <div>
+      <mat-form-field>
+        <input
+          type="email"
+          matInput
+          formControlName="email"
+          placeholder="Email"
+        >
+        <mat-hint >Veuillez entrer un email valide</mat-hint>
+        <mat-error >Email invalide</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          placeholder="Mot de passe"
+          ngModel
+          #passwordInput
+        >
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="passwordInput.invalid">Entrez minimum six caractères</mat-error>
+      </mat-form-field>
+    </div>
+
+
+<div  class="login-btn-display">
+<button mat-raised-button
+        *ngIf = "!isLoading"
+        type="submit"
+        color="accent"
+        >Se connecter</button>
+
+        <h2   routerLink="/signup" style="cursor: pointer;">Inscription sur le site</h2>
+
+
+</div>
+<div>
+  <h3>* Identifiant d'essaie : admin@admin.com<br> * Mot de passe : moncv1</h3>
+</div>
+
+
+</form>
+</div>
+
+</mat-card>
+
+</div>
+
+</div>

@@ -1,0 +1,182 @@
+.section-contact{
+  min-height: 90vh;
+
+
+
+}
+
+
+
+.contact{
+  margin: 4rem auto ;
+  width: 60%;
+
+
+   @include respond (tab-port){
+    width: 80%;
+
+}
+@include respond (phone){
+  width: 90%;
+
+}
+
+
+}
+
+
+.mat-box{
+
+  width: 70%;
+  margin: 0rem auto;
+  @include respond (tab-port){
+    width: 90%;
+    margin: auto auto;
+}
+ }
+
+ mat-form-field{
+   margin-top: 1rem;
+   width: 100%;
+ }
+
+ mat-card{
+   position: relative;
+   margin: auto auto;
+  }
+
+
+
+.contact-display{
+  padding-top:4rem;
+  margin: auto auto;
+  width: 60%;
+  min-height: auto;
+  background-color: rgb(234, 238, 241);
+  border-radius: 5px;
+
+  @include respond (tab-port){
+    width: 80%;
+    margin: auto auto;
+}
+
+}
+
+.display-box{
+  position: relative;
+  background-color: rgb(184, 213, 240);
+  margin: 10% auto;
+  width: 45%;
+  height: 70%;
+  min-height: 30rem;
+
+
+
+
+  @include respond (tab-land){
+    width: 45%;
+   }
+   @include respond (tab-port){
+    width: 70%;
+   }
+   @include respond (tab-phone){
+    width: 90%;
+   }
+
+
+}
+
+.message-box{
+
+ position: relative;
+  width: 50%;
+  height: 8rem;
+  background: rgb(92, 174, 241);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  float: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:not(:last-child){
+    border-right: 1px solid $color-grey-light-2;
+
+}
+@include respond (tab-port){
+  height: 6rem;
+}
+@include respond (phone){
+  height: 5rem;
+}
+h3 {
+  font-size: 120%;
+  @include respond (tab-land){
+    font-size: 115%;
+  }
+  @include respond (tab-port){
+   font-size: 75%;
+ }
+ @include respond (phone){
+   font-size: 50%;
+ }
+}
+
+}
+.my-details{
+  position: absolute;
+  left: 50%;
+  top: 60%;
+transform: translate(-50% , -50%);
+
+
+
+
+
+text-transform: uppercase;
+p {
+   font-size: 80%;
+   @include respond (tab-port){
+    font-size: 60%;
+  }
+  @include respond (phone){
+    font-size: 50%;
+  }
+}
+
+}
+
+.message{
+
+  font-size: 1.6rem;
+  text-align: center;
+
+}
+
+.display-letter{
+
+
+  font-size: 1.3rem;
+  min-height: 20rem;
+
+}
+
+.button-pos{
+  float: right;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+.post-image{
+  width: 100%;
+}
+
+.post-image img {
+  width: 100%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+mat-expansion-panel {
+  margin-bottom: 1rem;
+
+}

@@ -1,0 +1,26 @@
+mat-spinner{
+  margin: auto;
+}
+.login-btn-display{
+  display: flex;
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+
+}
+button{
+  margin-right: 3rem;
+  max-height: 4rem;
+}
+h2{
+  font-size: 1.4rem;
+  color: rgb(181, 199, 219);
+}
+h2:hover{
+  color: rgb(141, 189, 243);
+}
+
+h3{
+  line-height: 2rem;
+  font-size: 1.2rem;
+  color: rgb(138, 143, 148);
+}

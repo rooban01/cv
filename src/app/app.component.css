@@ -1,0 +1,33 @@
+mat-sidenav-container, mat-sidenav-content{
+  height: 90vh;
+}
+
+mat-sidenav {
+  margin-top: 8rem;
+  width: 150px;
+  height: 200px;
+
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+
+}
+
+a:hover,
+a:active{
+ color: lightgray;
+}
+
+.navigation-items{
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+
+.nav-caption{
+  display: inline-block;
+  padding-left: 6px ;
+}

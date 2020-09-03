@@ -1,0 +1,44 @@
+<section class="section-tours">
+
+  <div class="my-row-2">
+<div *ngFor = "let portfolio of portfolios" >
+    <div class="col-1-of-3">
+      <div class="my-card">
+          <div class="my-card-side my-card-side-front">
+              <div class="my-card-image my-card-image-1">
+              </div>
+              <h4 class="my-card-heading">
+                  {{portfolio.nom}}
+              </h4>
+              <div class="my-card-details">
+                  <ul>
+                      <li>{{portfolio.description}}</li>
+                      <li>{{portfolio.description1}}</li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="my-card-side my-card-side-back my-card-side-back-1">
+             <div class="my-card-cta">
+                 <div class="my-card-price-box">
+                     <p class="my-card-price-only"></p>
+                     <p class="my-card-price-value"></p>
+                 </div>
+                 <a href={{portfolio.lien}} class="my-btn my-btn-white">{{ portfolio.btn}}</a>
+             </div>
+          </div>
+      </div>
+  </div>
+
+
+
+</div>
+
+
+
+  </div>
+
+
+
+</section>
+

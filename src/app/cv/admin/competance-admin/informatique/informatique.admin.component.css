@@ -1,0 +1,14 @@
+.mat-box{
+  width: 80%;
+  margin: auto auto;
+ }
+
+ mat-form-field{
+   width: 100%;
+
+ }
+
+ .input-text{
+
+   font-size: 1.6rem;
+ }

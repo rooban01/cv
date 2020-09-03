@@ -1,0 +1,56 @@
+<div class="contact">
+  <mat-card>
+    <form [formGroup]="form" (submit) ="onSave()">
+      <div class="mat-box">
+
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="titre"
+                  placeholder="Informatiques"
+                >
+              </mat-form-field>
+            </div>
+
+
+            <div>
+              <mat-form-field>
+                <textarea
+                  matInput
+                  rows="4"
+                  formControlName="description"
+                  placeholder="Description"
+                  ></textarea>
+              </mat-form-field>
+            </div>
+
+
+
+            <div style="margin-top: 3rem; margin-bottom: 3rem;">
+              <div class ="my-row" >
+
+                <button mat-raised-button
+                      type="submit"
+                      color="accent"
+                      style="margin-right: 5rem;"
+                      >Ajouter
+                </button>
+                <button  mat-raised-button (click)="onPrecedent()" color="accent"    style="margin-right: .5rem;">
+                  Précédent
+                </button>
+                <button  mat-raised-button (click)="onNext()" color="accent">
+                  Suivant
+                </button>
+
+            </div>
+
+
+        </div>
+
+      </div>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,18 @@
+.mat-expansion-panel-header{
+  background-color: rgb(188, 211, 253);
+  border-radius: 0px;
+
+}
+
+.aa{
+
+  margin: auto auto;
+
+}
+
+
+mat-expansion-panel{
+
+  background-color: rgb(156, 186, 243);
+}
+

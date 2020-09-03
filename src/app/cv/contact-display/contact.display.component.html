@@ -1,0 +1,41 @@
+<div class="section-contact">
+  <div class="display-box" >
+
+
+          <div class="message-box" routerLink="/message" ><h3>message(s) envoyé(s)</h3>
+            <!-- <div  *ngFor = "let contact of contacts" >Vos message(s) envoyé(s)
+                <div *ngIf="userIsAuthenticated && userId === contact.creator" >
+
+                </div>
+            </div> -->
+          </div>
+          <div class="message-box" routerLink="/contactform">
+              <h3>Envoyer un message</h3>
+          </div>
+
+
+
+
+
+
+
+
+      <div *ngFor = "let header of headers" class="my-details">
+        <p>{{ header.gender}} {{header.nom}} {{header.prenom}}</p>
+        <p>Mail   :     {{ header.email}}</p>
+        <p>N° Tel : {{header.telephone}}</p>
+      </div>
+  <div>
+</div>
+
+
+  <!-- <div  *ngFor = "let contact of contacts" >
+            <div *ngIf="userIsAuthenticated && userId === contact.creator" >
+
+            </div>
+             <div class="message-box" *ngIf="contacts?.length ===0">
+          <p  >Pas de message envoyé</p>
+        </div>
+        </div> -->
+
+

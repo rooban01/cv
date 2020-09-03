@@ -1,0 +1,56 @@
+
+<div class="section-contact">
+<div class="contact">
+
+<mat-card>
+  <div class= "mat-box">
+<mat-spinner  *ngIf ="isLoading"></mat-spinner>
+
+
+    <form (submit)= "onSubmit()"  [formGroup] = "signupForm" *ngIf ="!isLoading">
+
+
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          type="email"
+          formControlName="email"
+          placeholder="Email"
+        >
+        <mat-hint >Veuillez entrer un email valid.</mat-hint>
+        <mat-error >Email invalide</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+
+          type="password"
+          formControlName="password"
+          ngModel
+          #passwordInput
+          placeholder="Mot de passe"
+        >
+        <mat-hint  align="end">{{passwordInput.value?.length}}/6</mat-hint>
+        <mat-error *ngIf="passwordInput.invalide">Entrez minimum six caractères</mat-error>
+      </mat-form-field>
+    </div>
+
+
+<div style="margin-top: 3rem; margin-bottom: 3rem;">
+<button mat-raised-button
+        *ngIf = "!isLoading"
+        type="submit"
+        color="accent"
+        >S'inscrire</button>
+</div>
+
+</form>
+</div>
+
+</mat-card>
+
+</div>

@@ -1,0 +1,38 @@
+/*
+.grid > div{
+  border: solid 1px brown;
+}
+
+.grid{
+  display: grid;
+
+  grid-template-columns: 20% 70%;
+  grid-column-gap: 5%;
+
+
+}
+mat-progress-bar{
+ background: linear-gradient(rgba(color-white,.9),orangred);
+  height: 1rem;
+  border-radius: 10px;
+}
+
+mat-label{
+  color: brown;
+  width: 10rem;
+  margin-left: 4rem;
+}
+
+
+.competance-label{
+  width: 15rem;
+  height: 5rem;
+
+  font-size: 1.6rem;
+}
+
+.competance-bar{
+  width: 50rem;
+  height: 3rem;
+
+} */

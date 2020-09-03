@@ -1,0 +1,90 @@
+<div class="description-box">
+  <div *ngFor ="let informatique of informatiques" >
+  <div class="atout-box" >
+
+
+    <div class="atout-heading-info">
+      <h2>{{ informatique.titre }}</h2>
+
+    </div>
+    <div class="atout-description" >
+
+      <div *ngIf="informatique.titre === 'backend'">
+        <mat-accordian>
+            <mat-expansion-panel class="mat-elevation-z0">
+              <mat-expansion-panel-header>
+                <div class="aa">
+                 <h3>{{ informatique.description}}</h3>
+                </div>
+              </mat-expansion-panel-header>
+            <mat-panel-description>
+               <app-progress-bar-backend class="aa"></app-progress-bar-backend>
+            </mat-panel-description>
+          </mat-expansion-panel>
+        </mat-accordian>
+      </div>
+
+      <div *ngIf="informatique.titre === 'frontend'">
+        <mat-accordian>
+            <mat-expansion-panel class="mat-elevation-z0">
+              <mat-expansion-panel-header>
+                <div class="aa">
+                  <h3> {{ informatique.description}}</h3>
+                </div>
+              </mat-expansion-panel-header>
+            <mat-panel-description>
+              <app-progress-bar-frontend class="aa"></app-progress-bar-frontend>
+            </mat-panel-description>
+          </mat-expansion-panel>
+        </mat-accordian>
+      </div>
+
+
+      <div *ngIf="informatique.titre === 'logiciels'">
+        <mat-accordian>
+            <mat-expansion-panel class="mat-elevation-z0">
+              <mat-expansion-panel-header>
+                <div class="aa">
+                  <h3> {{ informatique.description}}</h3>
+                </div>
+              </mat-expansion-panel-header>
+            <mat-panel-description>
+              <app-progress-bar-bureautique class="aa"></app-progress-bar-bureautique>
+            </mat-panel-description>
+          </mat-expansion-panel>
+        </mat-accordian>
+      </div>
+
+      <div *ngIf="informatique.titre === 'orm/pom/dom'">
+        <mat-accordian>
+            <mat-expansion-panel class="mat-elevation-z0">
+              <mat-expansion-panel-header>
+                <div class="aa">
+                  <h3> {{ informatique.description}}</h3>
+                </div>
+              </mat-expansion-panel-header>
+            <mat-panel-description>
+              <app-progress-bar class="aa"></app-progress-bar>
+            </mat-panel-description>
+          </mat-expansion-panel>
+        </mat-accordian>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+</div>
+<!--
+  <mat-paginator
+    [length]="100"
+    [pageSize]="5"
+    [pageSizeOptions]="[2, 5, 10, 20]">
+  </mat-paginator> -->
+</div>
+
+
+
+

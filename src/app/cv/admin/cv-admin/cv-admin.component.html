@@ -1,0 +1,54 @@
+<div class="contact">
+  <mat-card>
+    <form [formGroup]="form" (submit) ="onSaveCv()">
+      <div class="mat-box">
+
+
+
+            <div>
+              <mat-form-field>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="nom"
+                  placeholder="Nom"
+                >
+                <mat-error *ngIf="form.get('nom').invalid">Nom invalide</mat-error>
+              </mat-form-field>
+            </div>
+
+
+
+
+
+
+
+
+
+          <div>
+            <button mat-stroked-button type="button" (click)="cvPicker.click()">Ajouter Cv</button>
+            <input style="display:none" type="file" #cvPicker (change)="onCvPicked($event)">
+          </div>
+          <div class="image-preview" *ngIf="imagePreview1 !=='' && imagePreview1">
+            <img [src]="imagePreview1" [alt]="form.value.nom">
+          </div>
+
+          <div style="margin-top: 3rem; margin-bottom: 3rem;">
+            <div class ="my-row" >
+
+              <button mat-raised-button
+                    type="submit"
+                    color="accent"
+                    style="margin-right: 5rem;"
+                    >Ajouter
+              </button>
+
+
+          </div>
+          </div>
+
+      </div>
+    </form>
+  </mat-card>
+</div>
+

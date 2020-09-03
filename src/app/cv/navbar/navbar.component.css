@@ -1,0 +1,41 @@
+a:hover,
+a:active{
+ color: lightgray;
+}
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+.navigation-items{
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+
+.nav-caption{
+  display: inline-block;
+  padding-left: 6px ;
+}
+
+.nav-activated{
+  color: lightgray;
+}
+
+mat-toolbar{
+  height: 8rem;
+  background-image:url(imagesStat/navbar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+mat-icon{
+
+color: white;
+text-transform: uppercase;
+font-size: 16px;
+}

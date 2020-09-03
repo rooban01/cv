@@ -1,0 +1,64 @@
+<div class="section-contact">
+<div class=contact>
+<mat-accordian *ngFor = "let contact of contacts"  >
+
+
+  <div   *ngIf="userIsAuthenticated && userId === contact.creator" class="u-margin-buttom-small">
+
+
+  <mat-expansion-panel>
+
+      <mat-expansion-panel-header>
+
+           Consulter/Modifier mes messages envoyés.
+
+      </mat-expansion-panel-header>
+
+    <mat-panel-description class="display-letter" *ngFor="let header of headers">
+
+
+          {{ contact.gender }}{{" "}} {{ contact.nom }} {{" "}} {{ contact.prenom1 }}    <br>
+              Poste: {{contact.poste}}<br>
+              Societe: {{contact.societe}}<br>
+              Adresse: {{contact.addresse}} <br>
+              Telephone: {{ contact.telephone}}<br>
+              Mail: {{ contact.email}}
+              <br>
+              <br>
+              <br>
+
+
+            {{ header.gender }} {{" "}} {{ header.nom }} {{" "}} {{ header.prenom}},<br><br>
+
+
+
+            Suite à l’étude de votre candidature, nous avons le plaisir
+            de vous inviter à passer un entretien physique dans nos locaux,
+            situé à l'adresse indiquée ci-dessus le {{contact.rdv}}.<br><br>
+
+            A cette occasion, vous rencontrerez {{contact.gender}} {{contact.nom}} {{contact.prenom1}}
+            responsable de {{contact.poste}}.<br><br>
+
+            Je vous invite à vous présenter 15 minutes avant l’heure de
+            votre entretien ainsi que d’apporter votre pièce d’identité
+            afin d’accéder à nos locaux<br><br>
+
+            Cordialement,<br>
+            Chargée de recrutement<br><br>
+
+            Ps: {{contact.commentaire}}
+
+
+
+          </mat-panel-description>
+
+          <mat-action-row *ngIf = "userIsAuthenticated && userId === contact.creator">
+            <a  mat-raised-button color="accent" [routerLink]= "['/edit', contact.id]" style="text-decoration: none; outline: none;">Modifier</a>
+            <button  mat-raised-button color="accent" (click)="onDelete(contact.id)">Supprimer</button>
+          </mat-action-row>
+
+    </mat-expansion-panel>
+  </div>
+</mat-accordian>
+</div>
+</div>
